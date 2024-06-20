@@ -137,14 +137,6 @@ app.MapDelete("/api/coupon/{id:int}", (int id) =>
         response.StatusCode = System.Net.HttpStatusCode.OK;
         return Results.Ok(response);
     }
-
-    //Coupon coupon = CouponStore.couponList.FirstOrDefault(c => c.Id == id);
-    //if (coupon == null)
-    //{
-    //    return Results.NotFound();
-    //}
-    //CouponStore.couponList.Remove(coupon);
-    //return Results.Ok();
 })
     .WithName("Delete Coupon")
     .Produces<APIResponse>(200)
