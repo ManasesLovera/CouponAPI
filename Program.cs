@@ -15,6 +15,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(MappingConfig));
 builder.Services.AddScoped<IValidator<CouponCreateDTO>, CouponCreateValidation>();
+builder.Services.AddScoped<IValidator<CouponUpdateDTO>, CouponUpdateValidation>();
 
 var app = builder.Build();
 
